@@ -428,21 +428,59 @@ th {
 
 /*Make divs visible on screen*/
 
-body {
+/*body {
   background-color: gray;
 }
 
 div {
   border: 1px solid chocolate;
-}
+}*/
 
 /*Custom CSS*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 .top-navigation {
   background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 .top-navigation > .content {
   width: 970px;
   height: 70px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+.top-navigation .content .logo {
+  height: 60px;
+  margin-top: 5px;
+}
+.top-navigation .links {
+  list-style: none;
+  float: right;
+  margin-top: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+.top-navigation .links li {
+  transition: color .15s ease-in;
+  color: #838994;
+  display: inline-block;
+  margin-left: 25px;
+}
+.top-navigation .links > .active {
+  color: #4c5058;
+  font-weight: 600;
+}
+.top-navigation .links li:hover {
+  cursor: pointer;
+  color: #333333;
 }
